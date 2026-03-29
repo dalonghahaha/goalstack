@@ -9,9 +9,9 @@
 ## 当前位置
 
 - **阶段**：阶段 3（资讯功能）
-- **计划**：phase-03-plan-02
+- **计划**：phase-03-plan-03
 - **状态**：已完成
-- **进度**：67% ■■■■□□□ (2/3 计划)
+- **进度**：100% ■■■■■■■ (3/3 计划)
 
 ## 性能指标
 
@@ -46,6 +46,7 @@
 - [x] 赛事详情页（phase-02-plan-04）
 - [x] 球队详情页（phase-02-plan-05）
 - [x] 资讯中心列表页（phase-03-plan-02）
+- [x] 资讯详情页（phase-03-plan-03）
 
 ### 已创建的文件
 
@@ -110,7 +111,12 @@ src/
 │   └── news/
 │       ├── NewsFilter.tsx
 │       ├── NewsCard.tsx
-│       └── NewsList.tsx
+│       ├── NewsList.tsx
+│       ├── NewsContent.tsx
+│       └── RelatedNews.tsx
+├── app/news/
+│   └── [id]/
+│       └── page.tsx
 ├── hooks/
 │   ├── useMatches.ts
 │   ├── useCompetition.ts
@@ -135,17 +141,16 @@ src/
 
 **上一次会话**：2026-03-29
 **本次会话**：2026-03-30
-**会话主题**：阶段3计划2执行完成 - 资讯中心列表页
+**会话主题**：阶段3计划3执行完成 - 资讯详情页
 
 **已完成**：
-- 资讯中心列表页（phase-03-plan-02）
-  - NewsFilter 资讯筛选组件（类型、联赛、球队筛选）
-  - NewsCard 资讯卡片组件（封面图、标题、摘要、标签）
-  - NewsList 资讯列表组件（骨架屏、空状态、错误状态）
-  - /news 入口页面
+- 资讯详情页（phase-03-plan-03）
+  - NewsContent 资讯正文组件（标题、摘要、封面图、正文、标签）
+  - RelatedNews 相关推荐组件（列表展示、点击跳转）
+  - /news/[id] 详情页（面包屑、关联对象跳转、相关推荐、状态处理）
 
 **接下来的步骤**：
-- phase-03-plan-03: 资讯详情页
+- 阶段3剩余计划待执行
 
 ---
 *Last updated: 2026-03-30 after phase-03-plan-02 completion*
