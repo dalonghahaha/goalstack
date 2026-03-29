@@ -9,9 +9,9 @@
 ## 当前位置
 
 - **阶段**：阶段 2（核心数据功能）
-- **计划**：phase-02-plan-03
+- **计划**：phase-02-plan-04
 - **状态**：✅ 已完成
-- **进度**：50% ■■■□□□□□ (3/6 计划)
+- **进度**：67% ■■■■□□□ (4/6 计划)
 
 ## 性能指标
 
@@ -43,6 +43,7 @@
 - [x] 数据层基础设施（phase-02-plan-01）
 - [x] 比赛中心（首页）功能（phase-02-plan-02）
 - [x] 比赛详情页（phase-02-plan-03）
+- [x] 赛事详情页（phase-02-plan-04）
 
 ### 已创建的文件
 
@@ -87,6 +88,12 @@ src/
 │       ├── MatchStats.tsx
 │       ├── MatchEvents.tsx
 │       └── MatchLineup.tsx
+│   └── competition/
+│       ├── CompetitionHeader.tsx
+│       ├── StandingsTable.tsx
+│       ├── CompetitionSchedule.tsx
+│       ├── TopScorersList.tsx
+│       └── TeamList.tsx
 ├── hooks/
 │   ├── useMatches.ts
 │   ├── useCompetition.ts
@@ -119,9 +126,16 @@ src/
   - MatchEvents 事件时间轴组件（进球、黄红牌等）
   - MatchLineup 阵容组件（首发、替补，按位置分组）
   - 比赛详情页 /match/[id] 入口
+- 赛事详情页（phase-02-plan-04）
+  - CompetitionHeader 赛事头部组件（名称、赛季切换、轮次信息）
+  - StandingsTable 积分榜组件（排名、球队、战绩、近5场）
+  - CompetitionSchedule 赛程组件（轮次筛选、比赛列表）
+  - TopScorersList 射手榜组件（排名、球员、进球数）
+  - TeamList 球队列表组件（球队卡片、跳转详情页）
+  - 赛事详情页 /competition/[id] 入口
 
 **接下来的步骤**：
-- phase-02-plan-04: 球队详情页
+- phase-02-plan-05: 球队详情页
 
 ---
 *Last updated: 2026-03-29 after phase-02-plan-02 completion*
