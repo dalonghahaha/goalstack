@@ -9,9 +9,9 @@
 ## 当前位置
 
 - **阶段**：阶段 2（核心数据功能）
-- **计划**：phase-02-plan-02
+- **计划**：phase-02-plan-03
 - **状态**：✅ 已完成
-- **进度**：33% ■■□□□□□□□ (2/6 计划)
+- **进度**：50% ■■■□□□□□ (3/6 计划)
 
 ## 性能指标
 
@@ -42,6 +42,7 @@
 - [x] 接口异常时显示重试按钮（COMM-06）
 - [x] 数据层基础设施（phase-02-plan-01）
 - [x] 比赛中心（首页）功能（phase-02-plan-02）
+- [x] 比赛详情页（phase-02-plan-03）
 
 ### 已创建的文件
 
@@ -51,6 +52,7 @@ src/
 │   ├── globals.css
 │   ├── layout.tsx
 │   ├── page.tsx
+│   ├── match/[id]/page.tsx
 │   └── api/
 │       ├── matches/
 │       │   ├── route.ts
@@ -73,10 +75,18 @@ src/
 │   │   ├── EmptyState.tsx
 │   │   ├── ErrorState.tsx
 │   │   └── Skeleton.tsx
-│   └── layout/
-│       ├── Container.tsx
-│       ├── Header.tsx
-│       └── Footer.tsx
+│   ├── layout/
+│   │   ├── Container.tsx
+│   │   ├── Header.tsx
+│   │   └── Footer.tsx
+│   └── match/
+│       ├── MatchFilter.tsx
+│       ├── MatchCard.tsx
+│       ├── MatchList.tsx
+│       ├── MatchHeader.tsx
+│       ├── MatchStats.tsx
+│       ├── MatchEvents.tsx
+│       └── MatchLineup.tsx
 ├── hooks/
 │   ├── useMatches.ts
 │   ├── useCompetition.ts
@@ -99,18 +109,19 @@ src/
 ## 会话连续性
 
 **上一次会话**：2026-03-29
-**本次会话**：2026-03-29
-**会话主题**：阶段2计划2执行完成
+**本次会话**：2026-03-30
+**会话主题**：阶段2计划3执行完成
 
 **已完成**：
-- 比赛中心（首页）功能
-  - MatchFilter 筛选组件（日期、联赛、状态）
-  - MatchCard 比赛卡片组件（双向跳转）
-  - MatchList 比赛列表组件（状态处理）
-  - 首页集成完整筛选功能
+- 比赛详情页（phase-02-plan-03）
+  - MatchHeader 比赛头部组件（比分、球队、联赛跳转）
+  - MatchStats 统计数据组件（控球率、射门等对比）
+  - MatchEvents 事件时间轴组件（进球、黄红牌等）
+  - MatchLineup 阵容组件（首发、替补，按位置分组）
+  - 比赛详情页 /match/[id] 入口
 
 **接下来的步骤**：
-- phase-02-plan-03: 比赛详情页
+- phase-02-plan-04: 球队详情页
 
 ---
 *Last updated: 2026-03-29 after phase-02-plan-02 completion*
