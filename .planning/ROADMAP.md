@@ -50,12 +50,12 @@
   5. 用户可以查看球员详情（资料、数据、荣誉、能力维度）
 **Plans**：6 plans
 **Plan list**:
-- [ ] phase-02-plan-01.md — 数据层基础设施（类型、Mock数据、Hooks、API）
-- [ ] phase-02-plan-02.md — 比赛中心（筛选、卡片、列表）
-- [ ] phase-02-plan-03.md — 比赛详情页
-- [ ] phase-02-plan-04.md — 赛事详情页
-- [ ] phase-02-plan-05.md — 球队详情页
-- [ ] phase-02-plan-06.md — 球员详情页
+- [x] phase-02-plan-01.md — 数据层基础设施（类型、Mock数据、Hooks、API）
+- [x] phase-02-plan-02.md — 比赛中心（筛选、卡片、列表）
+- [x] phase-02-plan-03.md — 比赛详情页
+- [x] phase-02-plan-04.md — 赛事详情页
+- [x] phase-02-plan-05.md — 球队详情页
+- [x] phase-02-plan-06.md — 球员详情页
 **UI hint**：yes
 
 ### 阶段 3：资讯生态完善
@@ -67,7 +67,11 @@
   2. 用户可以进入资讯详情页阅读正文
   3. 用户可以点击资讯中的关联标签跳转到对应对象页
   4. 用户可以查看相关推荐资讯
-**Plans**：TBD
+**Plans**：3 plans
+**Plan list**:
+- [x] phase-03-plan-01.md — 资讯数据层基础设施
+- [ ] phase-03-plan-02.md — 资讯列表页
+- [ ] phase-03-plan-03.md — 资讯详情页
 **UI hint**：yes
 
 ### 阶段 4：优化与部署
@@ -86,9 +90,9 @@
 
 | 阶段 | 计划完成 | 状态 | 已完成 |
 |------|----------|------|--------|
-| 阶段 1：基础架构搭建 | TBD | 已计划 | 3 plans |
-| 阶段 2：核心数据功能 | TBD | 进行中 | 5 plans |
-| 阶段 3：资讯生态完善 | TBD | 未开始 | - |
+| 阶段 1：基础架构搭建 | TBD | ✅ 已完成 | 3 plans |
+| 阶段 2：核心数据功能 | TBD | ✅ 已完成 | 6 plans |
+| 阶段 3：资讯生态完善 | TBD | 进行中 | 1/3 plans |
 | 阶段 4：优化与部署 | TBD | 未开始 | - |
 
 ---
