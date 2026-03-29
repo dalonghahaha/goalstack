@@ -9,9 +9,9 @@
 ## 当前位置
 
 - **阶段**：阶段 2（核心数据功能）
-- **计划**：phase-02-plan-04
+- **计划**：phase-02-plan-05
 - **状态**：✅ 已完成
-- **进度**：67% ■■■■□□□ (4/6 计划)
+- **进度**：83% ■■■■■■□□ (5/6 计划)
 
 ## 性能指标
 
@@ -44,6 +44,7 @@
 - [x] 比赛中心（首页）功能（phase-02-plan-02）
 - [x] 比赛详情页（phase-02-plan-03）
 - [x] 赛事详情页（phase-02-plan-04）
+- [x] 球队详情页（phase-02-plan-05）
 
 ### 已创建的文件
 
@@ -94,6 +95,12 @@ src/
 │       ├── CompetitionSchedule.tsx
 │       ├── TopScorersList.tsx
 │       └── TeamList.tsx
+│   └── team/
+│       ├── TeamHeader.tsx
+│       ├── TeamSquad.tsx
+│       ├── TeamSchedule.tsx
+│       ├── TeamStats.tsx
+│       └── TeamHonors.tsx
 ├── hooks/
 │   ├── useMatches.ts
 │   ├── useCompetition.ts
@@ -117,7 +124,7 @@ src/
 
 **上一次会话**：2026-03-29
 **本次会话**：2026-03-30
-**会话主题**：阶段2计划3执行完成
+**会话主题**：阶段2计划5执行完成
 
 **已完成**：
 - 比赛详情页（phase-02-plan-03）
@@ -133,9 +140,16 @@ src/
   - TopScorersList 射手榜组件（排名、球员、进球数）
   - TeamList 球队列表组件（球队卡片、跳转详情页）
   - 赛事详情页 /competition/[id] 入口
+- 球队详情页（phase-02-plan-05）
+  - TeamHeader 球队头部组件（Logo、名称、基本信息、联赛跳转）
+  - TeamSquad 球队阵容组件（按位置分组、点击跳转球员详情）
+  - TeamSchedule 球队赛程组件（切换未来/过去、点击跳转比赛）
+  - TeamStats 球队统计组件（场次、胜平负、进球、胜率进度条）
+  - TeamHonors 球队荣誉组件（冠军次数展示）
+  - 球队详情页 /team/[id] 入口
 
 **接下来的步骤**：
-- phase-02-plan-05: 球队详情页
+- phase-02-plan-06: 球员详情页
 
 ---
 *Last updated: 2026-03-29 after phase-02-plan-02 completion*
