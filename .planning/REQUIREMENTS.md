@@ -120,14 +120,11 @@
 
 | REQ-ID | Phase | Status |
 |--------|-------|--------|
-| HOME-01 ~ HOME-07 | 待规划 | Pending |
-| MATCH-01 ~ MATCH-09 | 待规划 | Pending |
-| COMP-01 ~ COMP-08 | 待规划 | Pending |
-| TEAM-01 ~ TEAM-09 | 待规划 | Pending |
-| PLAYER-01 ~ PLAYER-07 | 待规划 | Pending |
-| NEWS-01 ~ NEWS-07 | 待规划 | Pending |
-| COMM-01 ~ COMM-07 | 待规划 | Pending |
+| COMM-04, COMM-05, COMM-06 | 阶段 1 | Pending |
+| HOME-01 ~ HOME-07, MATCH-01 ~ MATCH-09, COMP-01 ~ COMP-08, TEAM-01 ~ TEAM-09, PLAYER-01 ~ PLAYER-07, COMM-01 | 阶段 2 | Pending |
+| NEWS-01 ~ NEWS-07, COMM-01 | 阶段 3 | Pending |
+| COMM-02, COMM-03, COMM-07 | 阶段 4 | Pending |
 
 ---
 
-*Last updated: 2026-03-29 after requirements definition*
+*Last updated: 2026-03-29 after roadmap creation*
