@@ -1,0 +1,35 @@
+{
+  "name": "goalstack",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "next": "16.2.1",
+    "zustand": "4.5.2",
+    "recharts": "2.12.7",
+    "framer-motion": "11.11.17",
+    "@prisma/client": "5.22.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.2",
+    "@types/node": "^20.11.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "4.2.2",
+    "@tailwindcss/postcss": "4.2.2",
+    "postcss": "8.4.35",
+    "autoprefixer": "10.4.18",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "16.2.1",
+    "prisma": "5.22.0"
+  }
+}
