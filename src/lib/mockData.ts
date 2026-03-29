@@ -1,5 +1,5 @@
 import {
-  Match, League, Team, Player, News, MatchStats, Competition,
+  Match, League, Team, Player, News, NewsCategory, MatchStats, Competition,
   Standing, TopScorer, TeamDetail, TeamHonor, TeamStats,
   PlayerDetail, PlayerCareer, PlayerHonor, PlayerStats, PlayerAbility,
   MatchEvent, Lineup, LineupPlayer
@@ -269,17 +269,48 @@ export const mockMatches: Match[] = [
 ];
 
 // 资讯数据
+export const mockNewsCategories: NewsCategory[] = [
+  { id: "1", name: "match", nameZh: "比赛" },
+  { id: "2", name: "competition", nameZh: "赛事" },
+  { id: "3", name: "team", nameZh: "球队" },
+  { id: "4", name: "player", nameZh: "球员" },
+  { id: "5", name: "transfer", nameZh: "转会" },
+  { id: "6", name: "interview", nameZh: "专访" },
+];
+
 export const mockNews: News[] = [
   {
     id: "1",
     title: "曼联逆转取胜，继续保持争冠希望",
     summary: "在今天凌晨结束的一场英超焦点战中，曼联主场2-1逆转击败利物浦。",
-    content: "比赛详细内容...",
+    content: `
+## 比赛概述
+
+在今天凌晨结束的一场英超焦点战中，曼联主场2-1逆转击败利物浦，继续保持争冠希望。
+
+## 比赛进程
+
+上半场第25分钟，利ussels先拔头筹，萨拉赫接队友传球后冷静推射破门。半场结束时，曼联0-1落后。
+
+下半场易边再战，曼联加强进攻。第65分钟，拉什福德接B费传球后禁区内抽射破门，扳平比分。第82分钟，替补登场的加纳乔接到卡塞米罗的直塞球，单刀破门，帮助球队完成逆转。
+
+## 赛后评论
+
+曼联主教练阿莫林表示："这是一场伟大的逆转胜利，球队展现了永不放弃的精神。"
+
+## 技术统计
+
+- 控球率：曼联58% vs 利物浦42%
+- 射门：曼联15次 vs 利物浦8次
+- 射正：曼联6次 vs 利物浦3次
+    `,
+    coverImage: "/images/news/1.jpg",
     publishedAt: new Date("2026-03-28T23:00:00"),
     source: "箩筐体育",
     tags: ["英超", "曼联", "利物浦"],
     relatedMatches: [mockMatches[0]],
     relatedTeams: [mockTeams[0], mockTeams[1]],
+    relatedPlayers: [mockPlayers[0], mockPlayers[2]],
   },
   {
     id: "2",
@@ -303,10 +334,39 @@ export const mockNews: News[] = [
     relatedTeams: [mockTeams[4]],
     relatedPlayers: [mockPlayers[3]],
   },
+  {
+    id: "4",
+    title: "皇马官方宣布签下天才前锋",
+    summary: "皇家马德里官方宣布签下巴西天才前锋，签约5年。",
+    content: "详细内容...",
+    publishedAt: new Date("2026-03-26T20:00:00"),
+    source: "箩筐体育",
+    tags: ["西甲", "皇马", "转会"],
+    relatedTeams: [mockTeams[6]],
+  },
+  {
+    id: "5",
+    title: "梅西专访：期待与内马尔再次合作",
+    summary: "梅西接受采访谈到加盟巴萨的感受和未来目标。",
+    content: "详细内容...",
+    publishedAt: new Date("2026-03-25T18:00:00"),
+    source: "箩筐体育",
+    tags: ["专访", "梅西", "巴萨"],
+    relatedPlayers: [],
+  },
 ];
 
 // 辅助函数
 export const getNewsById = (id: string): News | undefined => mockNews.find(n => n.id === id);
+
+export const getNewsByTeamId = (teamId: string): News[] =>
+  mockNews.filter((n) => n.relatedTeams?.some((t) => t.id === teamId));
+
+export const getNewsByPlayerId = (playerId: string): News[] =>
+  mockNews.filter((n) => n.relatedPlayers?.some((p) => p.id === playerId));
+
+export const getNewsByLeagueId = (leagueId: string): News[] =>
+  mockNews.filter((n) => n.relatedTeams?.some((t) => t.league?.id === leagueId));
 export const getMatchById = (id: string): Match | undefined => mockMatches.find(m => m.id === id);
 export const getTeamById = (id: string): Team | undefined => mockTeams.find(t => t.id === id);
 export const getTeamDetailById = (id: string): TeamDetail | undefined => mockTeamDetails.find(t => t.id === id);
