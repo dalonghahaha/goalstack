@@ -4,14 +4,14 @@
 
 **项目名称**：箩筐体育
 **核心价值**：以"比赛"为核心入口，建立"可查、可信、可看懂"的足球数据平台，让用户能在 3 次点击内抵达核心详情页，实现比赛、赛事、球队、球员、资讯五大信息对象的闭环。
-**当前焦点**：阶段 2 核心数据功能开发中
+**当前焦点**：阶段 3 资讯功能开发中
 
 ## 当前位置
 
-- **阶段**：阶段 2（核心数据功能）
-- **计划**：phase-02-plan-05
-- **状态**：✅ 已完成
-- **进度**：83% ■■■■■■□□ (5/6 计划)
+- **阶段**：阶段 3（资讯功能）
+- **计划**：phase-03-plan-02
+- **状态**：已完成
+- **进度**：67% ■■■■□□□ (2/3 计划)
 
 ## 性能指标
 
@@ -45,6 +45,7 @@
 - [x] 比赛详情页（phase-02-plan-03）
 - [x] 赛事详情页（phase-02-plan-04）
 - [x] 球队详情页（phase-02-plan-05）
+- [x] 资讯中心列表页（phase-03-plan-02）
 
 ### 已创建的文件
 
@@ -55,6 +56,8 @@ src/
 │   ├── layout.tsx
 │   ├── page.tsx
 │   ├── match/[id]/page.tsx
+│   ├── news/
+│   │   └── page.tsx
 │   └── api/
 │       ├── matches/
 │       │   ├── route.ts
@@ -67,7 +70,10 @@ src/
 │       ├── teams/
 │       │   ├── route.ts
 │       │   └── [id]/route.ts
-│       └── players/
+│       ├── players/
+│       │   ├── route.ts
+│       │   └── [id]/route.ts
+│       └── news/
 │           ├── route.ts
 │           └── [id]/route.ts
 ├── components/
@@ -81,31 +87,36 @@ src/
 │   │   ├── Container.tsx
 │   │   ├── Header.tsx
 │   │   └── Footer.tsx
-│   └── match/
-│       ├── MatchFilter.tsx
-│       ├── MatchCard.tsx
-│       ├── MatchList.tsx
-│       ├── MatchHeader.tsx
-│       ├── MatchStats.tsx
-│       ├── MatchEvents.tsx
-│       └── MatchLineup.tsx
-│   └── competition/
-│       ├── CompetitionHeader.tsx
-│       ├── StandingsTable.tsx
-│       ├── CompetitionSchedule.tsx
-│       ├── TopScorersList.tsx
-│       └── TeamList.tsx
-│   └── team/
-│       ├── TeamHeader.tsx
-│       ├── TeamSquad.tsx
-│       ├── TeamSchedule.tsx
-│       ├── TeamStats.tsx
-│       └── TeamHonors.tsx
+│   ├── match/
+│   │   ├── MatchFilter.tsx
+│   │   ├── MatchCard.tsx
+│   │   ├── MatchList.tsx
+│   │   ├── MatchHeader.tsx
+│   │   ├── MatchStats.tsx
+│   │   ├── MatchEvents.tsx
+│   │   └── MatchLineup.tsx
+│   ├── competition/
+│   │   ├── CompetitionHeader.tsx
+│   │   ├── StandingsTable.tsx
+│   │   ├── CompetitionSchedule.tsx
+│   │   ├── TopScorersList.tsx
+│   │   └── TeamList.tsx
+│   ├── team/
+│   │   ├── TeamHeader.tsx
+│   │   ├── TeamSquad.tsx
+│   │   ├── TeamSchedule.tsx
+│   │   ├── TeamStats.tsx
+│   │   └── TeamHonors.tsx
+│   └── news/
+│       ├── NewsFilter.tsx
+│       ├── NewsCard.tsx
+│       └── NewsList.tsx
 ├── hooks/
 │   ├── useMatches.ts
 │   ├── useCompetition.ts
 │   ├── useTeam.ts
-│   └── usePlayer.ts
+│   ├── usePlayer.ts
+│   └── useNews.ts
 ├── lib/
 │   ├── mockData.ts
 │   └── utils.ts
@@ -124,32 +135,17 @@ src/
 
 **上一次会话**：2026-03-29
 **本次会话**：2026-03-30
-**会话主题**：阶段2计划5执行完成
+**会话主题**：阶段3计划2执行完成 - 资讯中心列表页
 
 **已完成**：
-- 比赛详情页（phase-02-plan-03）
-  - MatchHeader 比赛头部组件（比分、球队、联赛跳转）
-  - MatchStats 统计数据组件（控球率、射门等对比）
-  - MatchEvents 事件时间轴组件（进球、黄红牌等）
-  - MatchLineup 阵容组件（首发、替补，按位置分组）
-  - 比赛详情页 /match/[id] 入口
-- 赛事详情页（phase-02-plan-04）
-  - CompetitionHeader 赛事头部组件（名称、赛季切换、轮次信息）
-  - StandingsTable 积分榜组件（排名、球队、战绩、近5场）
-  - CompetitionSchedule 赛程组件（轮次筛选、比赛列表）
-  - TopScorersList 射手榜组件（排名、球员、进球数）
-  - TeamList 球队列表组件（球队卡片、跳转详情页）
-  - 赛事详情页 /competition/[id] 入口
-- 球队详情页（phase-02-plan-05）
-  - TeamHeader 球队头部组件（Logo、名称、基本信息、联赛跳转）
-  - TeamSquad 球队阵容组件（按位置分组、点击跳转球员详情）
-  - TeamSchedule 球队赛程组件（切换未来/过去、点击跳转比赛）
-  - TeamStats 球队统计组件（场次、胜平负、进球、胜率进度条）
-  - TeamHonors 球队荣誉组件（冠军次数展示）
-  - 球队详情页 /team/[id] 入口
+- 资讯中心列表页（phase-03-plan-02）
+  - NewsFilter 资讯筛选组件（类型、联赛、球队筛选）
+  - NewsCard 资讯卡片组件（封面图、标题、摘要、标签）
+  - NewsList 资讯列表组件（骨架屏、空状态、错误状态）
+  - /news 入口页面
 
 **接下来的步骤**：
-- phase-02-plan-06: 球员详情页
+- phase-03-plan-03: 资讯详情页
 
 ---
-*Last updated: 2026-03-29 after phase-02-plan-02 completion*
+*Last updated: 2026-03-30 after phase-03-plan-02 completion*
