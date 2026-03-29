@@ -60,6 +60,32 @@ export interface News {
   relatedPlayers?: Player[];
 }
 
+// ===== 资讯相关类型 =====
+
+export interface NewsFilter {
+  type?: "all" | "match" | "competition" | "team" | "player";
+  leagueId?: string;
+  teamId?: string;
+  keyword?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export interface NewsCategory {
+  id: string;
+  name: string;
+  nameZh: string;
+}
+
+// 扩展 News 类型
+export interface NewsDetail extends News {
+  category: NewsCategory;
+  author?: string;
+  viewCount?: number;
+  likeCount?: number;
+  shareCount?: number;
+}
+
 // ===== 扩展已有类型 =====
 
 // 比赛统计（扩展）
