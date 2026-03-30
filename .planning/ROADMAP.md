@@ -85,7 +85,7 @@
   4. 项目已部署上线并可访问
 **Plans**：4 plans
 **Plan list**:
-- [ ] phase-04-plan-01.md — 主题切换系统
+- [x] phase-04-plan-01.md — 主题切换系统
 - [ ] phase-04-plan-02.md — 响应式布局优化
 - [ ] phase-04-plan-03.md — 分页与加载更多
 - [ ] phase-04-plan-04.md — 部署准备
@@ -98,7 +98,7 @@
 | 阶段 1：基础架构搭建 | TBD | ✅ 已完成 | 3 plans |
 | 阶段 2：核心数据功能 | TBD | ✅ 已完成 | 6 plans |
 | 阶段 3：资讯生态完善 | TBD | ✅ 已完成 | 3 plans |
-| 阶段 4：优化与部署 | TBD | 未开始 | - |
+| 阶段 4：优化与部署 | TBD | 进行中 | 1 plan |
 
 ---
 
