@@ -1,12 +1,15 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import { Container } from "./Container";
 import { Button } from "../ui/Button";
+import { MobileMenu } from "./MobileMenu";
 import { useThemeStore } from "@/stores/themeStore";
 
 export function Header() {
   const { theme, toggleTheme } = useThemeStore();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/80 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-900/80">
@@ -26,11 +29,24 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
+            {/* 移动端 hamburger 菜单按钮 */}
+            <button
+              className="md:hidden rounded-lg p-2 text-gray-500 hover:bg-gray-100 active:bg-gray-200 dark:text-gray-400 dark:hover:bg-gray-800"
+              onClick={() => setIsMenuOpen(true)}
+              aria-label="打开菜单"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+
+            {/* PC 端主题切换按钮 */}
             <Button
               variant="ghost"
               size="sm"
               onClick={toggleTheme}
               aria-label="切换主题"
+              className="hidden md:flex"
             >
               {theme === "dark" ? (
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -45,6 +61,9 @@ export function Header() {
           </div>
         </div>
       </Container>
+
+      {/* 移动端菜单 */}
+      <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
     </header>
   );
 }
