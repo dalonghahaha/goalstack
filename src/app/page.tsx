@@ -31,12 +31,14 @@ export default function HomePage() {
     return targetDate.toISOString().split("T")[0];
   };
 
-  const { matches, loading, error, refetch } = useMatches({
+  const { matches, loading, error, refetch, currentPage, totalPages, hasMore, loadMore, goToPage } = useMatches({
     filter: {
       date: getDateString(dateFilter),
       leagueId: leagueId || undefined,
       status: status !== "all" ? status : undefined,
     },
+    pageSize: 10,
+    pagination: true,
   });
 
   const handleDateChange = useCallback((date: DateFilter) => {
@@ -78,6 +80,11 @@ export default function HomePage() {
             loading={loading}
             error={error}
             onRetry={refetch}
+            currentPage={currentPage}
+            totalPages={totalPages}
+            hasMore={hasMore}
+            onPageChange={goToPage}
+            onLoadMore={loadMore}
           />
         </div>
 
