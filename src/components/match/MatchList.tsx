@@ -71,7 +71,7 @@ export function MatchList({
   // 比赛列表
   return (
     <div>
-      <div className="space-y-3">
+      <div className="flex flex-col gap-4">
         {matches.map((match) => (
           <MatchCard key={match.id} match={match} />
         ))}

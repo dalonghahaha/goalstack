@@ -276,10 +276,18 @@ export interface PaginatedResponse<T> {
   totalPages: number;
 }
 
+export interface Pagination {
+  currentPage: number;
+  pageSize: number;
+  total: number;
+  totalPages: number;
+}
+
 // API 响应
 export interface ApiResponse<T> {
   success: boolean;
   data?: T;
+  pagination?: Pagination;
   error?: {
     code: string;
     message: string;

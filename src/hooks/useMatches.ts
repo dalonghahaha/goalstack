@@ -46,12 +46,20 @@ export function useMatches(options: UseMatchesOptions = {}) {
           setMatches(result.data);
         }
 
-        // 当前页数据量作为总数（实际项目中应该从后端获取总数）
-        const totalCount = result.data.length;
-        setTotal(totalCount);
-        setTotalPages(Math.ceil(totalCount / pageSize));
-        setCurrentPage(page);
-        setHasMore(result.data.length === pageSize);
+        // 使用 API 返回的分页信息
+        if (result.pagination) {
+          setTotal(result.pagination.total);
+          setTotalPages(result.pagination.totalPages);
+          setCurrentPage(result.pagination.currentPage);
+          setHasMore(result.pagination.currentPage < result.pagination.totalPages);
+        } else {
+          // 兼容没有返回分页信息的情况
+          const totalCount = result.data.length;
+          setTotal(totalCount);
+          setTotalPages(Math.ceil(totalCount / pageSize));
+          setCurrentPage(page);
+          setHasMore(result.data.length === pageSize);
+        }
       } else {
         setError(result.error?.message || "加载失败");
       }

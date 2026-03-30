@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // 允许的开发环境域名
+  allowedDevOrigins: ["xia.iiclub.com.cn", "localhost:3000"],
+
   // Vercel 部署优化
   output: "standalone",
 
