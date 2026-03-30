@@ -83,7 +83,12 @@
   2. 移动端获得良好的浏览体验
   3. PC 端支持分页，移动端支持加载更多
   4. 项目已部署上线并可访问
-**Plans**：TBD
+**Plans**：4 plans
+**Plan list**:
+- [ ] phase-04-plan-01.md — 主题切换系统
+- [ ] phase-04-plan-02.md — 响应式布局优化
+- [ ] phase-04-plan-03.md — 分页与加载更多
+- [ ] phase-04-plan-04.md — 部署准备
 **UI hint**：yes
 
 ## 进度表
@@ -97,4 +102,4 @@
 
 ---
 
-*Last updated: 2026-03-29 after phase 1 planning*
+*Last updated: 2026-03-30 after phase 4 planning*
