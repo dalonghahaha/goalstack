@@ -22,7 +22,11 @@ function NewsPageContent() {
     pageSize: 12,
   });
 
-  const { news, loading, error, refetch } = useNews({ filter });
+  const { news, loading, error, refetch, currentPage, totalPages, hasMore, loadMore, goToPage } = useNews({
+    filter,
+    pageSize: 12,
+    pagination: true,
+  });
 
   const handleTypeChange = useCallback((type: NewsFilterType["type"]) => {
     setFilter((prev) => ({ ...prev, type, page: 1 }));
@@ -73,6 +77,11 @@ function NewsPageContent() {
         loading={loading}
         error={error}
         onRetry={refetch}
+        currentPage={currentPage}
+        totalPages={totalPages}
+        hasMore={hasMore}
+        onPageChange={goToPage}
+        onLoadMore={loadMore}
       />
     </div>
   );
